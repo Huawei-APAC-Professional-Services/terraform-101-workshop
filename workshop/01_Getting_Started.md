@@ -68,6 +68,7 @@ You may follow the instructions below to provision an ECS and configure the agen
 2. There are two different ways to **edit the Terraform Configuration Scripts** as described below.
 
     a. Using [Visual Studio Code](https://code.visualstudio.com/download) Editor <br>
+    
     You may clone the Terraform Configuration Template in Step 1 to your local machine and edit the code using Visual Studio Code Editor. Once you have done editing, you can use [WinSCP](https://winscp.net/eng/download.php) Tool to transfer the files from local machine to the remote host as below. <br>
     (**Notes**: Ensure your ECS instance have the [Security Group](https://support.huaweicloud.com/intl/en-us/usermanual-vpc/en-us_topic_0073379079.html) with open port number 22)
 
@@ -76,6 +77,7 @@ You may follow the instructions below to provision an ECS and configure the agen
     *<p align="center"> Figure 2.4: Transfer files using WinSCP tool </p>*
 
     b. Using Command Line Interface (CLI) <br>
+
     In this hands-on lab learning, we have provision an ECS instance on Huawei Cloud account for Terraform command execution purpose. You may clone the Terraform configuration template directly in ECS instance and edit the code at the same place. As we are using Linux operating system, you may use any of the Linux build-in command as below to edit the scripts. <br>
 
     1. Using ```vi``` or ```vim``` command line editor <br>
