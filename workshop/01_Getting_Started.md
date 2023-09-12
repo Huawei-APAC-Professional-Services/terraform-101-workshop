@@ -75,21 +75,3 @@ You may follow the instructions below to provision an ECS and configure the agen
       *<p align="center"> ![figure2.4](./images/2.4.png) </p>*
 
       *<p align="center"> Figure 2.4: Transfer files using WinSCP tool </p>*
-
-    b. Using Command Line Interface (CLI) <br>
-
-       In this hands-on lab learning, we have provision an ECS instance on Huawei Cloud account for Terraform command execution purpose. You may clone the Terraform configuration template directly in ECS instance and edit the code at the same place. As we are using Linux operating system, you may use any of the Linux build-in command as below to edit the scripts. <br>
-
-       1. Using ```vi``` or ```vim``` command line editor <br>
-
-          * ```vi /to/the/path/of/file```: **vi** or **vim** to the file for editing
-          * ```i``` : Press **i** to enter the insert mode
-          * ```ESC```: Press **ESC** to exit the insert mode
-          * ```:wq```: Press **:wq** to save file and quit editing mode
-          * ```:q!```: Press **:q!** to quit without saving any changes
-          * ```:q``` : Press **:q** if no changes made and want to quit the editing mode
-
-      2. Using ```nano``` command line editor <br>
-
-         * ```nano /to/the/path/of/file```: **nano** to the file for editing
-         * follow the options displayed for edit, save file, and quit
