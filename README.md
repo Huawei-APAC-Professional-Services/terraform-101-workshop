@@ -45,7 +45,7 @@ Please follow the sequence below if you wish to perform the hands-on learning wi
 
 ```mermaid
 flowchart LR
-    Start[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/00_Fundamental_Knowledge.md'>00_Fundamental_Knowledge</a>]
+    00_Fundamental_Knowledge[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/00_Fundamental_Knowledge.md'>00_Fundamental_Knowledge</a>]
 
     00_Fundamental_Knowledge --> 01_Getting_Started[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/01_Getting_Started.md'>01_Getting_Started</a>]
 
@@ -60,5 +60,7 @@ flowchart LR
     05_Result_Validation --> 06_Resource_Cleaning[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/06_Resource_Cleaning.md'>06_Resource_Cleaning</a>]
 
     06_Resource_Cleaning --> 07_Terraform_Challenge[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/07_Terraform_Challenge.md'>07_Terraform_Challenge</a>]
+
+    07_Terraform_Challenge --> End
 
 ```
