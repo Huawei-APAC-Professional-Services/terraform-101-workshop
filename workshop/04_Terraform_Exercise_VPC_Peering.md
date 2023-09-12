@@ -150,7 +150,7 @@ At this stage, you have completed the reusable configuration scripts for VPC Pee
     d. Navigate to the ```hwcloud-terraform/resource-provisioning-playbook/outputs.tf``` file created in previous section, configure another output block to display and store the created VPC Peering resource ID in terraform state file. Example scripts is as below, you may modify the output variable name accordingly.
 
     ```
-    output "prod_requester_vpc_peering_id" { value = } 
+    output "prod2ingress_requester_vpc_peering_id" { value = } 
     ```
 
     e. The **output variable values** should obtain from the reusable configuration scripts under ```hwcloud-terraform/terraform-hwcloud-modules/terraform-hwcloud-vpc-peering/outputs.tf``` file. For example the ```requester_vpc_peering_id```, and the format is as below.
@@ -158,7 +158,7 @@ At this stage, you have completed the reusable configuration scripts for VPC Pee
     **output "output-variable-name" { value = module.module-name.output-variable-name-from-reusable-configuration-scripts}**
 
     ```
-    output "prod_requester_vpc_peering_id" { value = module.prod_vpc_2_transit_ingress_vpc.requester_vpc_peering_id}
+    output "prod2ingress_requester_vpc_peering_id" { value = module.prod_vpc_2_transit_ingress_vpc.requester_vpc_peering_id}
     ```
 
 2. Within the same ```vpc_peering.tf```, configure another module block to create a VPC Peering connection to enable the communication in between **production VPC** and **egress VPC**. Follow the guides in **Step 1** and you should able to achieve the similar configurations as below.
@@ -181,7 +181,7 @@ At this stage, you have completed the reusable configuration scripts for VPC Pee
     b. output block to display and store the created resource ID in terraform state file
 
     ```
-    output "prod_requester_vpc_peering_id" { value = module.prod_vpc_2_transit_egress_vpc.requester_vpc_peering_id}
+    output "prod2egress_requester_vpc_peering_id" { value = module.prod_vpc_2_transit_egress_vpc.requester_vpc_peering_id}
     ```
 
 ### Execute the Terraform commands for network resource creations
