@@ -4,7 +4,7 @@ In this guideline, you will learned how to configure the Terraform configuration
 
 ### Configure Terraform Scripts
 
-Under this section, you will be guided step-by-step on how to provision multiple network resources on the Huawei Cloud environment. Follow the steps below for resource provisioning.
+Under this section, you will be guided step-by-step on how to provision **multiple network resources** on the Huawei Cloud environment. Follow the steps below for resource provisioning.
 
 1. Under the ```hwcloud-terraform/resource-provisioning-playbook/provider.tf``` configuration file, configure the provider to be used in the resource provisioning. Modify the terraform provider ```version``` within the ```terraform block``` to the latest version, you may refer to this [Huawei Cloud Terraform](https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs) website for the latest version of the provider to be used. <br>
 
