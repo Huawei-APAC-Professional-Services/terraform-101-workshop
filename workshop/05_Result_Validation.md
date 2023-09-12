@@ -6,7 +6,7 @@ At this stage, you have successfully built your infrastructure environment, the 
 
 To validate the functionality of the resources being created, you need to have an **Elastic Cloud Server (ECS) in your production environment** to perform network connection testing. Follow the instruction below to create an ECS in production VPC using terraform scripts.
 
-1. From the downloaded template, you should have obtain the ECS configuration template named as ```ecs.tf``` file under ```hwcloud-terraform/resource-provisioning-playbook``` directory. Within the ```ecs.tf``` file, locate the ```huaweicloud_compute_instance``` resource block and modify the resource arguments as below.
+1. From the downloaded template, you should have obtain the ECS configuration template named as ```ecs.tf``` file under ```hwcloud-terraform/resource-provisioning-playbook``` directory. Within the ```ecs.tf``` file, locate the ```huaweicloud_compute_instance``` resource block and modify the resource arguments as below. This step is to create an ECS instance with the specific IP address within the production subnet CIDR range.
 
     * **uuid**: replace the module name with your configured production VPC module name
     * **fixed_ip_v4**: change the private IP address of the ECS according to the your production subnet CIDR range
@@ -27,7 +27,7 @@ To validate the functionality of the resources being created, you need to have a
     } 
     ```
 
-2. Within the same ```ecs.tf``` file, locate the ```huaweicloud_elb_listener``` resource block and modify the resource arguments as below.
+2. Within the same ```ecs.tf``` file, locate the ```huaweicloud_elb_listener``` resource block and modify the resource arguments as below. This step is to add the ELB listener and configure the production server as the backend server of the ELB, so that the traffic coming from the internet will be forwarded to the backend server by listening to the specific port number.
 
     * **loadbalancer_id**: replace the module name with your configured ingress VPC module name <br>
     
@@ -40,7 +40,7 @@ To validate the functionality of the resources being created, you need to have a
     }
     ```
 
-3. Within the same ```ecs.tf``` file, locate the ```huaweicloud_vpc_route``` resource block and modify the resource arguments as below.
+3. Within the same ```ecs.tf``` file, locate the ```huaweicloud_vpc_route``` resource block and modify the resource arguments as below. This step is to create a default route (0.0.0.0/0) in the production VPC route table where the nexthop is pointing to the VCC Peering connection, so that any egress traffic will be forwarded to the NAT Gateway and go outside internet via the EIP boound.
 
     * **vpc_id**: replace the module name with your configured production VPC module name
     * **nexthop**: replace the module name with your configured VPC Peering module name for connection in between production and egress VPCs <br>
@@ -55,7 +55,7 @@ To validate the functionality of the resources being created, you need to have a
     }
     ```
 
-4. Within the same ```ecs.tf``` file, locate the ```huaweicloud_nat_snat_rule``` resource block and modify the resource arguments as below.
+4. Within the same ```ecs.tf``` file, locate the ```huaweicloud_nat_snat_rule``` resource block and modify the resource arguments as below. This step is to add an SNAT rule in the NAT Gateway where the destination is the production VPC CIDR range, so that the egress traffic from the production workloads can reach to the internet.
 
     * **nat_gateway_id**: replace the module name with your configured egress VPC module name
     * **floating_ip_id**: replace the module name with your configured egress VPC module name <br>
