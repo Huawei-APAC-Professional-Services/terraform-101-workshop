@@ -61,6 +61,4 @@ flowchart LR
 
     06_Resource_Cleaning --> 07_Terraform_Challenge[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/07_Terraform_Challenge.md'>07_Terraform_Challenge</a>]
 
-    07_Terraform_Challenge --> End
-
 ```
