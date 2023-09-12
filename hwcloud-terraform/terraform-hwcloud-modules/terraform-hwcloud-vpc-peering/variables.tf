@@ -1,0 +1,1 @@
+# Declare the input variables used within resource blocks

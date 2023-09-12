@@ -1,0 +1,1 @@
+# Configure the resource blocks for resource provisioning
