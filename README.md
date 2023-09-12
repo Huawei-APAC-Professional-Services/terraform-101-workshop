@@ -41,24 +41,24 @@ Before going through the exercise in this lab, you should have the below tools a
 
 ### Terraform 101 Workshop
 
-Please follow the sequence below if you wish to perform the hands-on learning with Terraform 101 on Huawei Cloud
+Please follow the sequence below if you wish to perform the hands-on learning with Terraform 101 on Huawei Cloud.
+
+<script>
+  const callback = function () {
+    alert('A callback was triggered');
+  };
+</script>
 
 ```mermaid
 flowchart LR
-    00_Fundamental_Knowledge[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/00_Fundamental_Knowledge.md'>00_Fundamental_Knowledge</a>]
-    style 00_Fundamental_Knowledge fill:#33FF36,stroke:#333,stroke-width:2px
-    00_Fundamental_Knowledge --> 01_Getting_Started[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/01_Getting_Started.md'>01_Getting_Started</a>]
-    style 01_Getting_Started fill:#33FF36,stroke:#333,stroke-width:2px
-    01_Getting_Started --> 02_Solution_Overview[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/02_Solution_Overview.md'>02_Solution_Overview</a>]
-    style 02_Solution_Overview fill:#33FF36,stroke:#333,stroke-width:2px
-    02_Solution_Overview --> 03_Terraform_Exercise_VPC[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/03_Terraform_Exercise_VPC.md'>03_Terraform_Exercise_VPC</a>]
-    style 03_Terraform_Exercise_VPC fill:#33FF36,stroke:#333,stroke-width:2px
-    03_Terraform_Exercise_VPC --> 04_Terraform_Exercise_VPC_Peering[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/04_Terraform_Exercise_VPC_Peering.md'>04_Terraform_Exercise_VPC_Peering</a>]
-    style 04_Terraform_Exercise_VPC_Peering fill:#33FF36,stroke:#333,stroke-width:2px
-    04_Terraform_Exercise_VPC_Peering --> 05_Result_Validation[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/05_Result_Validation.md'>05_Result_Validation</a>]
-    style 05_Result_Validation fill:#33FF36,stroke:#333,stroke-width:2px
-    05_Result_Validation --> 06_Resource_Cleaning[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/06_Resource_Cleaning.md'>06_Resource_Cleaning</a>]
-    style 06_Resource_Cleaning fill:#33FF36,stroke:#333,stroke-width:2px
-    06_Resource_Cleaning --> 07_Terraform_Challenge[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/07_Terraform_Challenge.md'>07_Terraform_Challenge</a>]
-    style 07_Terraform_Challenge fill:#33FF36,stroke:#333,stroke-width:2px
+    00_Fundamental_Knowledge --> 01_Getting_Started
+    01_Getting_Started --> 02_Solution_Overview
+    02_Solution_Overview --> 03_Terraform_Exercise_VPC
+    03_Terraform_Exercise_VPC --> 04_Terraform_Exercise_VPC_Peering
+    04_Terraform_Exercise_VPC_Peering --> 05_Result_Validation
+    05_Result_Validation --> 06_Resource_Cleaning
+    06_Resource_Cleaning --> 07_Terraform_Challenge
+
+    click 00_Fundamental_Knowledge href "https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/00_Fundamental_Knowledge.md"
+
 ```
