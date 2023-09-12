@@ -1,12 +1,12 @@
 # Building Your Infrastructure from Code with Terraform Scripting
 
-In this guideline, you will learned how to configure the Terraform configuration scripts using the **modular structure** in order to provision the resource to achieve the architecture as in [Figure 3.0](https://github.com/hwcloud-apac-pso/terraform-101-workshop/blob/main/workshop/02_Solution_Overview.md).
+In this guideline, you will learned how to configure the Terraform configuration scripts using the **modular structure** in order to provision the resource to achieve the architecture as in [Figure 3.0](https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/02_Solution_Overview.md).
 
 ### Obtain the Terraform source code template
 
-Login to the ECS created in [Step 3](https://github.com/hwcloud-apac-pso/terraform-101-workshop/blob/main/workshop/01_Getting_Started.md), and run the below command to clone the Terraform template from GitHub.
+Login to the ECS created in [Step 3](https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/01_Getting_Started.md), and run the below command to clone the Terraform template from GitHub.
 
-```git clone https://github.com/hwcloud-apac-pso/terraform-101-workshop.git```
+```git clone https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop.git```
 
 Below describe the usage of the folder directory in the Terraform template that have been cloned. 
 
