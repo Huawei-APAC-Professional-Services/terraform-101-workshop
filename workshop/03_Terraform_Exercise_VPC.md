@@ -25,7 +25,7 @@ Under this section, you will be guided step-by-step on how to provision multiple
       required_providers {
         huaweicloud = {
           source  = "huaweicloud/huaweicloud"
-          version = "1.55.0"
+          version = "1.49.0"
         }
       }
     }
