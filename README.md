@@ -41,7 +41,7 @@ Before going through the exercise in this lab, you should have the below tools a
 
 ### Terraform 101 Workshop
 
-Please follow the sequence below if you wish to perform the hands-on learning with Terraform 101 on Huawei Cloud.
+Please follow the sequence below if you wish to perform the hands-on learning with Terraform 101 on Huawei Cloud. Expand the flowchart and click on every single element to perform the labs.
 
 ```mermaid
 flowchart LR
