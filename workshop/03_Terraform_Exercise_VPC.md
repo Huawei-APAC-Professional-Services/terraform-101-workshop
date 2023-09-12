@@ -2,21 +2,9 @@
 
 In this guideline, you will learned how to configure the Terraform configuration scripts using the **modular structure** in order to provision the resource to achieve the architecture as in [Figure 3.0](https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/02_Solution_Overview.md).
 
-### Obtain the Terraform source code template
-
-Login to the ECS created in [Step 3](https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/01_Getting_Started.md), and run the below command to clone the Terraform template from GitHub.
-
-```git clone https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop.git```
-
-Below describe the usage of the folder directory in the Terraform template that have been cloned. 
-
-* **hwcloud-terraform**: project directory <br>
-* **resource-provisioning-playbook**: project directory to create module block for resource provisioning <br>
-* **terraform-hwcloud-modules**: directory to store all the reusable configuration scripts for different resources
-
 ### Configure Terraform Scripts
 
-Under this section, you will be guided step-by-step on how to provision multiple resources on the Huawei Cloud environment. Follow the steps below for resource provisioning.
+Under this section, you will be guided step-by-step on how to provision multiple network resources on the Huawei Cloud environment. Follow the steps below for resource provisioning.
 
 1. Under the ```hwcloud-terraform/resource-provisioning-playbook/provider.tf``` configuration file, configure the provider to be used in the resource provisioning. Modify the terraform provider ```version``` within the ```terraform block``` to the latest version, you may refer to this [Huawei Cloud Terraform](https://registry.terraform.io/providers/huaweicloud/huaweicloud/latest/docs) website for the latest version of the provider to be used. <br>
 

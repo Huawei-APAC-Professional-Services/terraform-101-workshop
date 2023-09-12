@@ -35,5 +35,31 @@ Before going through the exercise in this lab, you should have some familiarity 
 Before going through the exercise in this lab, you should have the below tools and resources:
 
 * [Huawei Cloud Account](https://auth.huaweicloud.com/authui/login.html?service=https://console-intl.huaweicloud.com/console/#/login) with FullAccess permission <br> (**Notes:** The Huawei Cloud account will be provided to you if you attend the workshop physically that organized by Huawei Cloud Professional Service Team)
-* [Visual Studio Code Editor](https://code.visualstudio.com/download)
+* [Visual Studio Code Editor (Optional)](https://code.visualstudio.com/download)
 * [Git](https://git-scm.com/downloads)
+* [WinSCP (Optional)](https://winscp.net/eng/download.php)
+
+### Terraform 101 Workshop
+
+```mermaid
+flowchart LR
+    Account[<a href='https://github.com/Huawei-APAC-Professional-Services/hfa-workshop/blob/main/workshop/content/01_Account_Management.md'>Account Management</a>]
+    style Account fill:#33FF36,stroke:#333,stroke-width:1px
+    Account --> AccountInitialization[<a href='https://github.com/Huawei-APAC-Professional-Services/hfa-workshop/blob/main/workshop/content/02_Account_Initialization.md'>Account Initialization</a>]
+    style AccountInitialization fill:#33FF36,stroke:#333,stroke-width:1px
+    AccountInitialization --> LocalEnvironmentSetup[<a href='https://github.com/Huawei-APAC-Professional-Services/hfa-workshop/blob/main/workshop/content/03_Local_Env_Setup.md'>Local Environment Setup</a>]
+    style LocalEnvironmentSetup fill:#3633FF,stroke:#333,stroke-width:1px
+    LocalEnvironmentSetup --> HFA_IAM_Configuration[<a href='https://github.com/Huawei-APAC-Professional-Services/hfa-workshop/blob/main/workshop/content/04_HFA_IAM_Configuration.md'>HFA IAM Configuration</a>]
+    style HFA_IAM_Configuration fill:#33FF36,stroke:#333,stroke-width:1px
+    HFA_IAM_Configuration --> HFA_Base_Configuration[<a href='https://github.com/Huawei-APAC-Professional-Services/hfa-workshop/blob/main/workshop/content/05_HFA_Base_Configuration.md'>HFA Base Configuration</a>]
+    style HFA_Base_Configuration fill:#33FF36,stroke:#333,stroke-width:1px
+     HFA_IAM_Configuration --> HFA_Network_Configuration[<a href='https://github.com/Huawei-APAC-Professional-Services/hfa-workshop/blob/main/workshop/content/06_HFA_Network_Configuration.md'>HFA Network Configuration</a>]
+    style HFA_Network_Configuration fill:#33FF36,stroke:#333,stroke-width:1px
+    HFA_Network_Configuration --> HFA_Application_Deployment[<a href='https://github.com/Huawei-APAC-Professional-Services/hfa-workshop/blob/main/workshop/content/07_HFA_Application_Deployment.md'>HFA Application Deployment</a>]
+    HFA_Base_Configuration --> HFA_Application_Deployment
+    style HFA_Application_Deployment fill:#33FF36,stroke:#333,stroke-width:1px
+    HFA_Application_Deployment --> HFA_Integration[<a href='https://github.com/Huawei-APAC-Professional-Services/hfa-workshop/blob/main/workshop/content/08_HFA_Integration.md'>HFA Integration</a>]
+    style HFA_Integration fill:#33FF36,stroke:#333,stroke-width:1px
+    HFA_Integration --> HFA_Challenge[<a href='https://github.com/Huawei-APAC-Professional-Services/hfa-workshop/blob/main/workshop/content/09_HFA_Challenge.md'>HFA Challenge</a>]
+    style HFA_Challenge fill:#33FF36,stroke:#333,stroke-width:1px
+```

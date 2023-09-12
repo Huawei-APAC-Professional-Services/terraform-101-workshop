@@ -51,3 +51,41 @@ You may follow the instructions below to provision an ECS and configure the agen
     *<p align="center"> ![figure2.3](./images/2.3.png) </p>*
 
     *<p align="center"> Figure 2.3: Bind agency to ECS </p>*
+
+
+### Obtain the Terraform source code template
+
+1. Login to the ECS created in  [Step 3](https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/01_Getting_Started.md) under previous section, and run the below command to clone the Terraform template from GitHub.
+
+    ```git clone https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop.git```
+
+    Below describe the usage of the folder directory in the Terraform template that have been cloned. 
+
+    * **hwcloud-terraform**: project directory <br>
+    * **resource-provisioning-playbook**: project directory to create module block for resource provisioning <br>
+    * **terraform-hwcloud-modules**: directory to store all the reusable configuration scripts for different resources
+
+2. There are two different ways to **edit the Terraform Configuration Scripts** as described below.
+
+    a. Using [Visual Studio Code](https://code.visualstudio.com/download) Editor
+       You may clone the Terraform Configuration Template in Step 1 to your local machine and edit the code using Visual Studio Code Editor. Once you have done editing, you can use [WinSCP](https://winscp.net/eng/download.php) Tool to transfer the files from local machine to the remote host as below. <br
+       (**Notes**: Ensure your ECS instance have the [Security Group](https://support.huaweicloud.com/intl/en-us/usermanual-vpc/en-us_topic_0073379079.html) with open port number 22)
+
+      *<p align="center"> ![figure3.1](./images/3.1.png) </p>*
+
+      *<p align="center"> Figure 3.1: Transfer files using WinSCP tool </p>*
+
+    b. Using Command Line Interface (CLI)
+       In this hands-on lab learning, we have provision an ECS instance on Huawei Cloud account for Terraform command execution purpose. You may clone the Terraform configuration template directly in ECS instance and edit the code at the same place. As we are using Linux operating system, you may use any of the Linux build-in command as below to edit the scripts.
+
+       1. ```vi``` or ```vim``` command line editor
+          * ```vi /to/the/path/of/file```: **vi** or **vim** to the file for editing
+          * ```i``` : Press **i** to enter the insert mode
+          * ```ESC```: Press **ESC** to exit the insert mode
+          * ```:wq```: Press **:wq** to save file and quit editing mode
+          * ```:q!```: Press **:q!** to quit without saving any changes
+          * ```:q``` : Press **:q** if no changes made and want to quit the editing mode
+
+      2. ```nano``` command line editor
+         * ```nano /to/the/path/of/file```: **nano** to the file for editing
+         * follow the options displayed for edit, save file, and quit
