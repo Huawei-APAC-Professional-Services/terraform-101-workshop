@@ -43,7 +43,11 @@ Before going through the exercise in this lab, you should have the below tools a
 
 Please follow the sequence below if you wish to perform the hands-on learning with Terraform 101 on Huawei Cloud. Expand the flowchart and click on every single element to perform the labs.
 
-```mermaid
+```
+mermaid.flowchartConfig = {
+    width: 100%
+}
+mermaid
 flowchart LR
     00_Fundamental_Knowledge[<a href='https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/00_Fundamental_Knowledge.md'>00_Fundamental_Knowledge</a>]
 
