@@ -24,7 +24,7 @@ You may follow the instructions below to provision an ECS and configure the agen
 
 3. Navigate to the ECS console and create an ECS with the following specifications.
 
-    **region**          : Singapore Region <br>
+    **region**          : Hong Kong Region <br>
     **operating system**: Ubuntu 22.04 <br>
     **compute flavor**  : s6.large.2 <br>
     **vCPUs**           : 2 <br>
