@@ -88,7 +88,7 @@ You may follow the instructions below to provision an ECS and configure the agen
 
     b. Using [WinSCP](https://winscp.net/eng/download.php) Tool <br>
     
-    Once you have done editing the source code, you can use [WinSCP](https://winscp.net/eng/download.php) Tool to transfer the files from local machine to the remote host as below. <br>
+    Once you have done editing the source code, you can use [WinSCP](https://winscp.net/eng/download.php) Tool to transfer the files from local machine to the remote host as below. Enter the ECS credentials as prompted, the default value is **Huawei@123**. <br>
 
     *<p align="center"> ![figure2.5](./images/2.5.png) </p>*
 
