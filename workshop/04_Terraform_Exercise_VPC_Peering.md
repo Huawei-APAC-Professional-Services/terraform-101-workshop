@@ -11,7 +11,7 @@ At this stage, you have completed the basic resources provisioning including VPC
       required_providers {
         huaweicloud = {
           source  = "huaweicloud/huaweicloud"
-          version = "1.49.0"
+          version = "1.56.0"
         }
       }
     }

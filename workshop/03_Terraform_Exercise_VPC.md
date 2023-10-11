@@ -13,12 +13,12 @@ Under this section, you will be guided step-by-step on how to provision **multip
       required_providers {
         huaweicloud = {
           source  = "huaweicloud/huaweicloud"
-          version = "1.49.0"
+          version = "1.56.0"
         }
       }
     }
     provider "huaweicloud" {
-      region     = "ap-southeast-3"
+      region     = "ap-southeast-1"
     }
     ```
     *<p align="center"> ![figure4.0](./images/4.0.png) </p>*
