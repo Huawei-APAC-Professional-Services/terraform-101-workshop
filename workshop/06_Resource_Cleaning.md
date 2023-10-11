@@ -4,7 +4,7 @@ If your are no longer require the resources, you are advised to delete or destro
 
 ### Destroy the Huawei Cloud resources using Terraform commands
 
-1. Under the ```/hwcloud-terraform/resource-provisioning-playbook/``` directory, execute the command below to destroy the cloud resources. Be caution when running this command as it will delete all the resources according to your current Terraform configuration scripts and update the Terraform state file. <br>
+1. Under the ```/hwcloud-terraform/resource-provisioning-playbook/``` directory inside ECS, execute the command below to destroy the cloud resources. Be caution when running this command as it will delete all the resources according to your current Terraform configuration scripts and update the Terraform state file. <br>
 
     ```$ terraform destroy -auto-approve```
 
