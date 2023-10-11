@@ -78,11 +78,11 @@ You may follow the instructions below to provision an ECS and configure the agen
     
     Once you have done editing the source code, you can use the ```scp``` command to transfer the files from local machine to the remote host as below. <br>
 
-    1. **Linux**
+    1. **Linux** <br>
         ```scp -r /path/to/the/project/directory root@public-ip-address-of-the-ecs:~/``` <br>
         Enter the ECS credentials as prompted, the default value is **Huawei@123**.
 
-    2. **Windows CMD or PowerShell**
+    2. **Windows CMD or PowerShell** <br>
         ```scp -r \path\to\the\project\directory root@public-ip-address-of-the-ecs:~/``` <br>
         Enter the ECS credentials as prompted, the default value is **Huawei@123**.
 
