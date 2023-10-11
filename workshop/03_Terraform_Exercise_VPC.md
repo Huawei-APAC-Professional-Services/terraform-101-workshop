@@ -234,21 +234,46 @@ Under this section, you will be guided step-by-step on how to provision **multip
 
 ### Execute the Terraform commands for network resource creations
 
-At this stage, you have completed the configuration scripts for the VPCs, NAT Gateway and ELB resources. Follow the instructions below to provision the network resources on Huawei Cloud environment. 
+At this stage, you have completed the configuration scripts for the VPCs, NAT Gateway and ELB resources. Follow the instructions below to upload the source code to the ECS and provision the network resources on Huawei Cloud environment. 
 
-1. Login to the ECS with Terraform installed, navigate to the ```hwcloud-terraform/resource-provisioning-playbook/``` directory and run the below commands to **format** the terraform configuration files to ensure a consistent format within codebase and **initialize the modules** being used for resource provisioning. <br>
+1. Upload the source code to the ECS on Huawei Cloud environment.
+
+  a. **Using Command Line (CLI)**
+    1. **Linux** <br>
+      ```
+      scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/input_local_vars.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+
+      scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/outputs.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+
+      scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/vpc.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+      ``` 
+      Enter the ECS credentials as prompted, the default value is **Huawei@123**.
+
+    2. **Windows CMD or PowerShell** <br>
+      ```
+      scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\input_local_vars.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+
+      scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\outputs.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+
+      scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\vpc.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+      ```
+      Enter the ECS credentials as prompted, the default value is **Huawei@123**.
+
+  b. **Using WinSCP Tool**: Locate your files on your local machine, and manually copy and paste the files to the remote host.
+
+2. Login to the ECS with Terraform installed, check if all the files has been uplaoded successfully. Navigate to the ```hwcloud-terraform/resource-provisioning-playbook/``` directory and run the below commands to **format** the terraform configuration files to ensure a consistent format within codebase and **initialize the modules** being used for resource provisioning. <br>
 
     ```cd hwcloud-terraform/resource-provisioning-playbook/``` <br>
     ```terraform fmt```<br>
     ```terraform init```
 
-2. Once sucessfully initialize the configuration scripts, execute the below commands to **validate** the configuration scripts and output the configuration plan that are going to apply to the Huawei Cloud environment. **This command will only review the plan without making any changes to your environment**. <br>
+3. Once sucessfully initialize the configuration scripts, execute the below commands to **validate** the configuration scripts and output the configuration plan that are going to apply to the Huawei Cloud environment. **This command will only review the plan without making any changes to your environment**. <br>
 
     ```terraform validate```<br>
     ```terraform plan```
 
-3. Once review the plan, execute the commands below to **apply changes** to your environment. <br>
+4. Once review the plan, execute the commands below to **apply changes** to your environment. <br>
 
     ```terraform apply -auto-approve```
 
-4. Repeat **Step 1** only if you have added any new module blocks. Repeat **Step 2** and **Step 3** if you have modified the scripts for troubleshooting purpose.
+5. Repeat **Step 1** only if you have added any new module blocks. Repeat **Step 2** and **Step 3** if you have modified the scripts for troubleshooting purpose.

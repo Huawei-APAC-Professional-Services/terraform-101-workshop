@@ -76,19 +76,19 @@ You may follow the instructions below to provision an ECS and configure the agen
 
     a. Using **Command Line (CLI)**<br>
     
-    Once you have done editing the source code, you can use the ```scp``` command to transfer the files from local machine to the remote host as below. <br>
+    Try to upload the cloned repository from local machine to the remote ECS by using the ```scp``` command as below. <br>
 
     1. **Linux** <br>
-        ```scp -r /path/to/the/project/directory root@public-ip-address-of-the-ecs:~/``` <br>
+        ```scp -r /path-to-project-directory/terraform-101-workshop/hwcloud-terraform root@public-ip-address-of-the-ecs:~/``` <br>
         Enter the ECS credentials as prompted, the default value is **Huawei@123**.
 
     2. **Windows CMD or PowerShell** <br>
-        ```scp -r \path\to\the\project\directory root@public-ip-address-of-the-ecs:~/``` <br>
+        ```scp -r \path-to-project-directory\terraform-101-workshop\hwcloud-terraform root@public-ip-address-of-the-ecs:~/``` <br>
         Enter the ECS credentials as prompted, the default value is **Huawei@123**.
 
     b. Using [WinSCP](https://winscp.net/eng/download.php) Tool <br>
     
-    Once you have done editing the source code, you can use [WinSCP](https://winscp.net/eng/download.php) Tool to transfer the files from local machine to the remote host as below. Enter the ECS credentials as prompted, the default value is **Huawei@123**. <br>
+    Try to upload the cloned repository from local machine to the remote ECS by using the [WinSCP](https://winscp.net/eng/download.php) Tool as below. Enter the ECS credentials as prompted, the default value is **Huawei@123**. <br>
 
     *<p align="center"> ![figure2.5](./images/2.5.png) </p>*
 
