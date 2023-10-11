@@ -186,21 +186,36 @@ At this stage, you have completed the reusable configuration scripts for VPC Pee
 
 ### Execute the Terraform commands for network resource creations
 
-At this stage, you have completed the configuration scripts for the VPC Peering connections. Follow the instructions below to provision the peering resources on Huawei Cloud environment. 
+At this stage, you have completed the configuration scripts for the VPC Peering connections. Follow the instructions below to upload the source code to the ECS and provision the peering resources on Huawei Cloud environment. 
 
-1. Login to the ECS with Terraform installed, navigate to the ```hwcloud-terraform/resource-provisioning-playbook/``` directory and run the below commands to **format** the terraform configuration files to ensure a consistent format within codebase and **initialize the modules** being used for resource provisioning. <br>
+1. Upload the source code to the ECS on Huawei Cloud environment.
+
+    a. **Using Command Line (CLI)**, enter the ECS credentials as prompted, the default value is **Huawei@123**.
+    * **Linux** <br>
+      ```
+      $ scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/vpc-peering.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+      ```
+
+    * **Windows** <br>
+      ```
+      $ scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\vpc-peering.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+      ```
+
+    b. **Using WinSCP Tool**: Locate your files on your local machine, and manually copy and paste the files to the remote host.
+
+2. Login to the ECS with Terraform installed, navigate to the ```hwcloud-terraform/resource-provisioning-playbook/``` directory and run the below commands to **format** the terraform configuration files to ensure a consistent format within codebase and **initialize the modules** being used for resource provisioning. <br>
 
     ```cd hwcloud-terraform/resource-provisioning-playbook/``` <br>
     ```terraform fmt```<br>
     ```terraform init```
 
-2. Once sucessfully initialize the configuration scripts, execute the below commands to **validate** the configuration scripts and output the configuration plan that are going to apply to the Huawei Cloud environment. **This command will only review the plan without making any changes to your environment**. <br>
+3. Once sucessfully initialize the configuration scripts, execute the below commands to **validate** the configuration scripts and output the configuration plan that are going to apply to the Huawei Cloud environment. **This command will only review the plan without making any changes to your environment**. <br>
 
     ```terraform validate```<br>
     ```terraform plan```
 
-3. Once review the plan, execute the commands below to **apply changes** to your environment. <br>
+4. Once review the plan, execute the commands below to **apply changes** to your environment. <br>
 
     ```terraform apply -auto-approve```
 
-4. Repeat **Step 1** only if you have added any new module blocks. Repeat **Step 2** and **Step 3** if you have modified the scripts for troubleshooting purpose.
+5. Repeat **Step 1** only if you have added any new module blocks. Repeat **Step 2** and **Step 3** if you have modified the scripts for troubleshooting purpose.
