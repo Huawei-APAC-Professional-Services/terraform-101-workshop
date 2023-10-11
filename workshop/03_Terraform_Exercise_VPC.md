@@ -240,24 +240,20 @@ At this stage, you have completed the configuration scripts for the VPCs, NAT Ga
 
   a. **Using Command Line (CLI)**
     1. **Linux** <br>
-      ```
-      scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/input_local_vars.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
-
-      scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/outputs.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
-
-      scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/vpc.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
-      ``` 
-      Enter the ECS credentials as prompted, the default value is **Huawei@123**.
+    ```
+    scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/input_local_vars.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+    scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/outputs.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+    scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/vpc.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+    ``` 
+    Enter the ECS credentials as prompted, the default value is **Huawei@123**.
 
     2. **Windows CMD or PowerShell** <br>
-      ```
-      scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\input_local_vars.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
-
-      scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\outputs.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
-
-      scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\vpc.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
-      ```
-      Enter the ECS credentials as prompted, the default value is **Huawei@123**.
+    ```
+    scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\input_local_vars.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+    scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\outputs.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+    scp \path-to-project-directory\hwcloud-terraform\resource-provisioning-playbook\vpc.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
+    ```
+    Enter the ECS credentials as prompted, the default value is **Huawei@123**.
 
   b. **Using WinSCP Tool**: Locate your files on your local machine, and manually copy and paste the files to the remote host.
 
