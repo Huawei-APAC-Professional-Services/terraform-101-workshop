@@ -22,7 +22,7 @@ You may follow the instructions below to provision an ECS and configure the agen
 
     *<p align="center"> Figure 2.1: Assign permission to the agency </p>*
 
-3. Readiness of the ECS and Terraform IaC tool. 
+3. Readiness of the ECS and Terraform IaC tool. <br>
     **(Notes: If you are attending the workshop hosted by Huawei Team, you may skip this step as the ECS will be provided with Terraform installed. Proceed to the next step for the agency binding)**
 
     a. Navigate to the ECS console and create an ECS with the following specifications.
