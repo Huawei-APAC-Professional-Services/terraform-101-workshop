@@ -22,8 +22,10 @@ You may follow the instructions below to provision an ECS and configure the agen
 
     *<p align="center"> Figure 2.1: Assign permission to the agency </p>*
 
-3. Navigate to the ECS console and create an ECS with the following specifications.
+3. Readiness of the ECS and Terraform IaC tool. 
+    **(Notes: If you are attending the workshop hosted by Huawei Team, you may skip this step as the ECS will be provided with Terraform installed. Proceed to the next step for the agency binding)**
 
+    a. Navigate to the ECS console and create an ECS with the following specifications.
     **region**          : Hong Kong Region <br>
     **operating system**: Ubuntu 22.04 <br>
     **compute flavor**  : s6.large.2 <br>
@@ -36,7 +38,7 @@ You may follow the instructions below to provision an ECS and configure the agen
 
     *<p align="center"> Figure 2.2: Create an ECS in Huawei Cloud </p>*
 
-4. Once the ECS is up and running, log in to the ECS and install the Terraform with the command below. <br> (**Notes:** If you are using different operating system other than Ubuntu, please follow the guidelines in [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) website instead.)
+    b. Once the ECS is up and running, log in to the ECS and install the Terraform with the command below. <br> (**Notes:** If you are using different operating system other than Ubuntu, please follow the guidelines in [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) website instead.)
 
     ```$ sudo apt update``` <br>
     ```$ sudo apt install software-properties-common gnupg2 curl``` <br>
@@ -46,7 +48,7 @@ You may follow the instructions below to provision an ECS and configure the agen
     ```$ sudo apt install terraform``` <br>
     ```$ terraform --version``` <br>
 
-5. Once the Terraform is successfully installed, navigate to the ECS console and bind the agency created in **Step 1** to the ECS.
+4. Once the Terraform is successfully installed, navigate to the ECS console and bind the agency created in **Step 1** to the ECS.
 
     *<p align="center"> ![figure2.3](./images/2.3.png) </p>*
 
@@ -55,7 +57,7 @@ You may follow the instructions below to provision an ECS and configure the agen
 
 ### Obtain the Terraform source code template
 
-1. Login to the ECS created in  [Step 3](https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/01_Getting_Started.md) under previous section, and run the below command to clone the Terraform template from GitHub.
+1.  From your **local machine**, open [Visual Studio Code](https://code.visualstudio.com/download) Editor, and **clone the repository** by using the below git clone command. The Visual Studio Code Editor will be used to perform any **code modification**.
 
     ```git clone https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop.git```
 
@@ -65,29 +67,34 @@ You may follow the instructions below to provision an ECS and configure the agen
     * **resource-provisioning-playbook**: project directory to create module block for resource provisioning <br>
     * **terraform-hwcloud-modules**: directory to store all the reusable configuration scripts for different resources
 
-2. There are two different ways to **edit the Terraform Configuration Scripts** as described below.
-
-    a. Using [Visual Studio Code](https://code.visualstudio.com/download) Editor <br>
-    
-    You may clone the Terraform Configuration Template in Step 1 to your local machine and edit the code using Visual Studio Code Editor. Once you have done editing, you can use [WinSCP](https://winscp.net/eng/download.php) Tool to transfer the files from local machine to the remote host as below. <br>
-    (**Notes**: Ensure your ECS instance have the [Security Group](https://support.huaweicloud.com/intl/en-us/usermanual-vpc/en-us_topic_0073379079.html) with open port number 22)
+2. **To upload the source code to the ECS created/provided** in previous section, there are two ways to do it either using the **Command Line (CLI)** or **WinSCP tool**. You are require to obtain the public IP address of the ECS from the ECS managemenet console as below screenshot.
+    (**Notes**: Ensure your ECS instance have the [Security Group](https://support.huaweicloud.com/intl/en-us/usermanual-vpc/en-us_topic_0073379079.html) with open **port number 22**)
 
     *<p align="center"> ![figure2.4](./images/2.4.png) </p>*
 
-    *<p align="center"> Figure 2.4: Transfer files using WinSCP tool </p>*
+    *<p align="center"> Figure 2.4: Public IP address of the ECS </p>*
 
-    b. Using Command Line Interface (CLI) <br>
+    a. Using **Command Line (CLI)**<br>
+    
+    Once you have done editing the source code, you can use the ```scp``` command to transfer the files from local machine to the remote host as below. <br>
 
-    In this hands-on lab learning, we have provision an ECS instance on Huawei Cloud account for Terraform command execution purpose. You may clone the Terraform configuration template directly in ECS instance and edit the code at the same place. As we are using Linux operating system, you may use any of the Linux build-in command as below to edit the scripts. <br>
+    1. **Linux**
+        ```
+        scp -r /path/to/the/project/directory root@public-ip-address-of-the-ecs:~/
+        ```
+        Enter the ECS credentials as prompted, the default value is **Huawei@123**.
 
-    1. Using ```vi``` or ```vim``` command line editor <br>
-        * ```vi /to/the/path/of/file```: **vi** or **vim** to the file for editing
-        * ```i``` : Press **i** to enter the insert mode
-        * ```ESC```: Press **ESC** to exit the insert mode
-        * ```:wq```: Press **:wq** to save file and quit editing mode
-        * ```:q!```: Press **:q!** to quit without saving any changes
-        * ```:q``` : Press **:q** if no changes made and want to quit the editing mode
+    2. **Windows CMD or PowerShell**
+        ```
+        scp -r \path\to\the\project\directory root@public-ip-address-of-the-ecs:~/
 
-    2. Using ```nano``` command line editor <br>
-        * ```nano /to/the/path/of/file```: **nano** to the file for editing
-        * follow the options displayed for edit, save file, and quit
+        ```
+        Enter the ECS credentials as prompted, the default value is **Huawei@123**.
+
+    b. Using [WinSCP](https://winscp.net/eng/download.php) Tool <br>
+    
+    Once you have done editing the source code, you can use [WinSCP](https://winscp.net/eng/download.php) Tool to transfer the files from local machine to the remote host as below. <br>
+
+    *<p align="center"> ![figure2.5](./images/2.5.png) </p>*
+
+    *<p align="center"> Figure 2.5: Transfer files using WinSCP tool </p>*
