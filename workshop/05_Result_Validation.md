@@ -6,7 +6,7 @@ At this stage, you have successfully built your infrastructure environment, the 
 
 To validate the functionality of the resources being created, you need to have an **Elastic Cloud Server (ECS) in your production environment** to perform network connection testing. Follow the instruction below to create an ECS in production VPC using terraform scripts.
 
-1. From the downloaded template, you should have obtain the ECS configuration template named as ```ecs.tf``` file under ```hwcloud-terraform/resource-provisioning-playbook``` directory. Within the ```ecs.tf``` file, locate the ```huaweicloud_compute_instance``` resource block and modify the resource arguments as below. This step is to create an ECS instance with the specific IP address within the production subnet CIDR range.
+1. From the downloaded template, you should have obtain the ECS configuration template named as ```ecs.tf``` file under ```hwcloud-terraform/resource-provisioning-playbook``` directory. Within the ```ecs.tf``` file, uncomment all the lines, locate the ```huaweicloud_compute_instance``` resource block and modify the resource arguments as below. This step is to create an ECS instance with the specific IP address within the production subnet CIDR range.
 
     * **uuid**: replace the module name with your configured production VPC module name
     * **fixed_ip_v4**: change the private IP address of the ECS according to the your production subnet CIDR range
