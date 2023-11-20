@@ -25,8 +25,8 @@ You may follow the instructions below to provision an ECS and configure the agen
 3. Readiness of the ECS and Terraform IaC tool. <br>
     **(Notes: If you are attending the workshop hosted by Huawei Team, you may skip this step as the ECS will be provided with Terraform installed. Proceed to the next step for the agency binding)**
 
-    a. Navigate to the ECS console and create an ECS with the following specifications.
-    **region**          : Hong Kong Region <br>
+    a. Navigate to the ECS console and create an ECS with the following specifications. <br>
+    **region**          : Singapore Region <br>
     **operating system**: Ubuntu 22.04 <br>
     **compute flavor**  : s6.large.2 <br>
     **vCPUs**           : 2 <br>
