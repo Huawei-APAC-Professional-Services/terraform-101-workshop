@@ -18,7 +18,7 @@ Under this section, you will be guided step-by-step on how to provision **multip
       }
     }
     provider "huaweicloud" {
-      region     = "ap-southeast-1"
+      region     = "ap-southeast-3"
     }
     ```
     *<p align="center"> ![figure4.0](./images/4.0.png) </p>*
@@ -150,7 +150,7 @@ Under this section, you will be guided step-by-step on how to provision **multip
   variable "transit_ingress_subnet_name" { default = "vpc-ingress-sub" }
   variable "transit_ingress_subnet_cidr" { default = "10.16.0.0/24" }
   variable "transit_ingress_elb_name" { default = "elb-prod" }
-  variable "transit_ingress_elb_az" { default = [ "ap-southeast-1a","ap-southeast-1b"] }
+  variable "transit_ingress_elb_az" { default = [ "ap-southeast-3a","ap-southeast-3b"] }
   ```
 
   e. Navigate to the ```hwcloud-terraform/resource-provisioning-playbook/outputs.tf``` file created in Section 2.1, configure another output block to display and store the created ingress resource ID in terraform state file. Example scripts is as below, you may modify the output variable name accordingly.
