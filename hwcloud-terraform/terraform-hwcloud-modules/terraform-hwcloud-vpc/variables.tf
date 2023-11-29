@@ -18,7 +18,7 @@ variable "primary_dns" {
 variable "secondary_dns" {
   description = "The dns for all subnets"
   type        = string
-  default     = "100.125.128.250" #Singapore region
+  default     = "100.125.1.251" #Bangkok region
 }
 
 variable "private_subnet_name" {

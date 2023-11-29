@@ -1,6 +1,6 @@
 # # create ecs
 # data "huaweicloud_availability_zones" "az" {
-#   region = "ap-southeast-3"
+#   region = "ap-southeast-2"
 # }
 # data "huaweicloud_compute_flavors" "flavor" {
 #   availability_zone = data.huaweicloud_availability_zones.az.names[0]

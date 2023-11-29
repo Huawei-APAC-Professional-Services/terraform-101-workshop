@@ -8,7 +8,7 @@ This section provides you with a very quick introduction to the overall cloud ar
 
 *<p align="center"> Figure 3.0: Overall Cloud Architecture Diagram </p>*
 
-There will be three Virtual Private Cloud (VPCs) to be deployed in the Singapore region (ap-southeast-3) to serve different purposes as stated below:
+There will be three Virtual Private Cloud (VPCs) to be deployed in the Bangkok region (ap-southeast-2) to serve different purposes as stated below:
 
 * **transit VPCs** to control the ingress traffic (vpc-ingress) and egress traffic (vpc-egress) within the cloud environment or between the cloud environment and the outside world. 
 * A **NAT Gateway** will be deployed in the **egress VPC** to allow the workloads in other isolated environments (other VPCs) to be able to access the internet.
