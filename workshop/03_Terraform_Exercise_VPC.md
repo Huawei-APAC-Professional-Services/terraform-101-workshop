@@ -13,18 +13,18 @@ Under this section, you will be guided step-by-step on how to provision **multip
       required_providers {
         huaweicloud = {
           source  = "huaweicloud/huaweicloud"
-          version = "1.56.0"
+          version = "~> 1.67.0"
         }
       }
     }
     provider "huaweicloud" {
-      region     = "ap-southeast-2"
+      region     = "ap-southeast-3"
     }
     ```
     *<p align="center"> ![figure4.0](./images/4.0.png) </p>*
     *<p align="center"> Figure 4.0: Terraform Provider Version </p>*
 
-2. Under the ```hwcloud-terraform/resource-provisioning-playbook/``` directory, create a new terraform file and named it as ```vpc.tf```. Within the vpc.tf file, we will create multiple module blocks for all the VPCs requires according to the diagram in [Figure 3.0](https://github.com/hwcloud-apac-pso/terraform-101-workshop/blob/main/workshop/02_Solution_Overview.md).
+2. Under the ```hwcloud-terraform/resource-provisioning-playbook/``` directory, create a new terraform file and named it as ```vpc.tf```. Within the vpc.tf file, we will create multiple module blocks for all the VPCs requires according to the diagram in [Figure 3.0](https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop/blob/master/workshop/02_Solution_Overview.md).
 
   #### 2.1 Create egress VPC
 
