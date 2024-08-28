@@ -211,9 +211,9 @@ Under this section, you will be guided step-by-step on how to provision **multip
 
   ```
   variable "prod_vpc" { default = "vpc-prod" }
-  variable "prod_vpc_cidr" { default = "10.100.0.0/16" }
+  variable "prod_vpc_cidr" { default = "10.50.0.0/16" }
   variable "prod_private_subnet_name" { default = "vpc-prod-sub" }
-  variable "prod_private_subnet_cidr" { default = "10.100.0.0/24" }
+  variable "prod_private_subnet_cidr" { default = "10.50.0.0/24" }
   ```
 
   e. Navigate to the ```hwcloud-terraform/resource-provisioning-playbook/outputs.tf``` file created in Section 2.1, configure another output block to display and store the created production resource ID in terraform state file. Example scripts is as below, you may modify the output variable name accordingly.
