@@ -76,7 +76,7 @@ To validate the functionality of the resources being created, you need to have a
     #!/bin/bash
     echo `date` > /tmp/user_data.txt
     #echo "Huawei@123" | passwd --stdin root
-    echo "root:Huawei@123" | sudo chpasswd
+    echo "root:candidate@2024" | sudo chpasswd
     sudo apt update -y &&
     sudo apt install -y nginx
     ```

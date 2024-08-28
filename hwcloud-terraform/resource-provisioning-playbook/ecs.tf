@@ -100,7 +100,7 @@
 #   redirect_pool_id = huaweicloud_elb_pool.ingress_elb_pool.id
 # }
 # resource "huaweicloud_elb_member" "ingress_elb_member" {
-#   address       = "10.100.0.101"
+#   address       = "10.50.0.101"
 #   protocol_port = 80
 #   pool_id       = huaweicloud_elb_pool.ingress_elb_pool.id
 # }
