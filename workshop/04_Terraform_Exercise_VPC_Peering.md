@@ -167,7 +167,7 @@ At this stage, you have completed the reusable configuration scripts for VPC Pee
 
     ```
     module "prod_vpc_2_transit_egress_vpc" {
-      source = "../terraform-hwcloud-modules/terraform-hwcloud-vpc-peering"\
+      source = "../terraform-hwcloud-modules/terraform-hwcloud-vpc-peering"
       requester_vpc_name = var.prod_vpc
       requester_vpc_id = module.prod-vpc.vpc_id
       requester_vpc_cidr = var.prod_vpc_cidr
