@@ -57,6 +57,26 @@ You may follow the instructions below to provision an ECS and configure the agen
 
 ### Obtain the Terraform source code template
 
+#### Method 1 ####
+1. Open the command prompt from the local machine, execute the below command, the public IP address is the EIP address that bound to the ECS created or provided in previous section.
+
+    ```$ ssh root@replace-with-public-ip-address``` <br>
+
+    *<p align="center"> ![figure2.4](./images/2.4.png) </p>*
+
+    *<p align="center"> Figure 2.4: Public IP address of the ECS </p>*
+
+2. Once you have successfully login to the remote ECS, execute the below command to clone the repository.
+
+    ```git clone https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop.git```
+
+    Below describe the usage of the folder directory in the Terraform template that have been cloned. 
+
+    * **hwcloud-terraform**: project directory <br>
+    * **resource-provisioning-playbook**: project directory to create module block for resource provisioning <br>
+    * **terraform-hwcloud-modules**: directory to store all the reusable configuration scripts for different resources
+
+#### Method 2 ####
 1.  From your **local machine**, open [Visual Studio Code](https://code.visualstudio.com/download) Editor, and **clone the repository** by using the below git clone command. The Visual Studio Code Editor will be used to perform any **code modification**.
 
     ```git clone https://github.com/Huawei-APAC-Professional-Services/terraform-101-workshop.git```
