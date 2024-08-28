@@ -2,10 +2,10 @@ terraform {
   required_providers {
     huaweicloud = {
       source  = "huaweicloud/huaweicloud"
-      version = "~> 1.56.0" # change the version number to the latest version
+      version = "~> 1.67.0"
     }
   }
 }
 provider "huaweicloud" {
-  region     = "ap-southeast-2"
+  region     = "ap-southeast-3"
 }

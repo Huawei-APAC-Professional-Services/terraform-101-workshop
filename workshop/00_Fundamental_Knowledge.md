@@ -43,6 +43,8 @@ The table below describes the usage of typical Terraform commands.
 | Terraform Command | Usage |
 | ------------- | ------------- |
 | ```terraform init``` | To initialize the local Terraform environment and install any plugins as needed |
+| ```terraform fmt``` | To ensure the format of the code is consistent throughout the codebase |
+| ```terraform validate``` | To scan through the codebase if there is any syntax error occur and prompt you the error message |
 | ```terraform plan``` | Compares the Terraform state with the current state in the cloud and displays the execution plan for changes review |
 | ```terraform apply``` | Execute the plan and make changes to the environment while updating the state file |
 | ```terraform destroy``` | Destroy the resources when it is no longer needed |
