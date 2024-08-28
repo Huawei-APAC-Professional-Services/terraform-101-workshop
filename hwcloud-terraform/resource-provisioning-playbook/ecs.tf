@@ -24,7 +24,7 @@
 
 #   network {
 #     uuid = module.prod-vpc.private_subnet_id
-#     fixed_ip_v4  = "10.100.0.101"
+#     fixed_ip_v4  = "10.50.0.101"
 #   }
 #   depends_on = [ 
 #     module.prod-vpc
