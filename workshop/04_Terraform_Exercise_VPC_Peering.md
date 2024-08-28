@@ -11,7 +11,7 @@ At this stage, you have completed the basic resources provisioning including VPC
       required_providers {
         huaweicloud = {
           source  = "huaweicloud/huaweicloud"
-          version = "1.56.0"
+          version = "~> 1.67.0"
         }
       }
     }
@@ -186,11 +186,34 @@ At this stage, you have completed the reusable configuration scripts for VPC Pee
 
 ### Execute the Terraform commands for network resource creations
 
-At this stage, you have completed the configuration scripts for the VPC Peering connections. Follow the instructions below to upload the source code to the ECS and provision the peering resources on Huawei Cloud environment. 
+At this stage, you have completed the configuration scripts for the VPC Peering connections. Now you are required to execute the terraform command for resource provisioning, select the appropriate method below to execute the task.
+
+#### Method 1 ####
+This method is applicable if you are using Huawei ECS to write and modify the Terraform scripts. Follow the instruction below to create peering resources.
+
+1. Under the ```hwcloud-terraform/resource-provisioning-playbook/``` directory, run the below commands to **format** the terraform configuration files to ensure a consistent format within codebase and **initialize the modules** being used for resource provisioning. <br>
+
+    ```cd hwcloud-terraform/resource-provisioning-playbook/``` <br>
+    ```terraform fmt```<br>
+    ```terraform init```
+
+2. Once sucessfully initialize the configuration scripts, execute the below commands to **validate** the configuration scripts and output the configuration plan that are going to apply to the Huawei Cloud environment. **This command will only review the plan without making any changes to your environment**. <br>
+
+    ```terraform validate```<br>
+    ```terraform plan```
+
+3. Once review the plan, execute the commands below to **apply changes** to your environment. <br>
+
+    ```terraform apply -auto-approve```
+
+4. Repeat **Step 1** only if you have added any new module blocks. Repeat **Step 2** and **Step 3** if you have modified the scripts for troubleshooting purpose.
+
+#### Method 2 ####
+This method is applicable if you are using your local machine to write and modify the Terraform scripts. Follow the instructions below to upload the source code to the ECS and provision the peering resources on Huawei Cloud environment. 
 
 1. Upload the source code to the ECS on Huawei Cloud environment.
 
-    a. **Using Command Line (CLI)**, enter the ECS credentials as prompted, the default value is **Huawei@123**.
+    a. **Using Command Line (CLI)**, enter the ECS credentials as prompted, the default value is **candidate@2024**.
     * **Linux** <br>
       ```
       $ scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/vpc-peering.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
