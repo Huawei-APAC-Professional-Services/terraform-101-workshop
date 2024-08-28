@@ -261,7 +261,7 @@ This method is applicable if you are using your local machine to write and modif
 
 1. Upload the source code to the ECS on Huawei Cloud environment.
 
-    a. **Using Command Line (CLI)**, enter the ECS credentials as prompted, the default value is **Huawei@123**.
+    a. **Using Command Line (CLI)**, enter the ECS credentials as prompted, the default value is **candidate@2024**.
     * **Linux** <br>
       ```
       $ scp /path-to-project-directory/hwcloud-terraform/resource-provisioning-playbook/input_local_vars.tf root@public-ip-address-of-the-ecs:~/hwcloud-terraform/resource-provisioning-playbook/
