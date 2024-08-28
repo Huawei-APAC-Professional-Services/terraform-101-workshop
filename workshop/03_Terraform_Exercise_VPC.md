@@ -234,7 +234,30 @@ Under this section, you will be guided step-by-step on how to provision **multip
 
 ### Execute the Terraform commands for network resource creations
 
-At this stage, you have completed the configuration scripts for the VPCs, NAT Gateway and ELB resources. Follow the instructions below to upload the source code to the ECS and provision the network resources on Huawei Cloud environment. 
+At this stage, you have completed the configuration scripts for the VPCs, NAT Gateway and ELB resources. Now you are required to execute the terraform command for resource provisioning, select the appropriate method below to execute the task.
+
+#### Method 1 ####
+This method is applicable if you are using Huawei ECS to write and modify the Terraform scripts. Follow the instruction below to create network resources.
+
+1. Under the ```hwcloud-terraform/resource-provisioning-playbook/``` directory, run the below commands to **format** the terraform configuration files to ensure a consistent format within codebase and **initialize the modules** being used for resource provisioning. <br>
+
+    ```cd hwcloud-terraform/resource-provisioning-playbook/``` <br>
+    ```terraform fmt```<br>
+    ```terraform init```
+
+2. Once sucessfully initialize the configuration scripts, execute the below commands to **validate** the configuration scripts and output the configuration plan that are going to apply to the Huawei Cloud environment. **This command will only review the plan without making any changes to your environment**. <br>
+
+    ```terraform validate```<br>
+    ```terraform plan```
+
+3. Once review the plan, execute the commands below to **apply changes** to your environment. <br>
+
+    ```terraform apply -auto-approve```
+
+4. Repeat **Step 1** only if you have added any new module blocks. Repeat **Step 2** and **Step 3** if you have modified the scripts for troubleshooting purpose.
+
+#### Method 2 ####
+This method is applicable if you are using your local machine to write and modify the Terraform scripts. Follow the instructions below to upload the source code to the ECS and provision the network resources on Huawei Cloud environment. 
 
 1. Upload the source code to the ECS on Huawei Cloud environment.
 
